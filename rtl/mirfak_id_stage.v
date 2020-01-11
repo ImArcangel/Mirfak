@@ -159,7 +159,7 @@ module mirfak_id_stage (
             default:           begin xcause = E_ILLEGAL_INST;         mtval = id_instruction_i; end
         endcase
     end
-    //
+    //  ID -> EX
     always @(posedge clk_i) begin
         if (rst_i || idex_clear_i) begin
             ex_pc_o          <= 0;

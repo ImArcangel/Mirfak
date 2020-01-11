@@ -118,7 +118,7 @@ module mirfak_ex_stage #(parameter [0:0]  ENABLE_MULTDIV = 1
             default: ex_fwd_data_o  = alu_result;
         endcase
     end
-    //
+    //   EX -> WB
     always @(posedge clk_i) begin
         if (rst_i || exwb_clear_i) begin
             wb_pc_o           <= 0;
